@@ -1,103 +1,112 @@
-import Image from "next/image";
+import { Hero } from "./components/hero/hero";
+import { Card } from "./components/card/card";
+
+const SereneContent = () => (
+  <div className="flex flex-col gap-2">
+    <span className="text-balance">
+      Perfect for couples who’ve planned everything and want peace of mind on
+      the big day.
+    </span>
+    <ul className="list-disc list-inside font-semibold">
+      <li>One planning meeting before the wedding</li>
+      <li>Timeline creation and vendor confirmation</li>
+      <li>Rehearsal coordination (up to 1 hour)</li>
+      <li>Day-of coordination (8 hours coverage)</li>
+      <li>Management of vendors, setup, and schedule</li>
+    </ul>
+    <span>Starting at: $1,000</span>
+  </div>
+);
+
+const TranquilContent = () => (
+  <div className="flex flex-col gap-2">
+    <span className="text-balance">
+      For couples who have some plans in place but want extra guidance along the
+      way.
+    </span>
+    <ul className="list-disc list-inside font-semibold">
+      <li>Up to 3 planning meetings</li>
+      <li>Vendor recommendations and communication support</li>
+      <li>Assistance with design and theme details</li>
+      <li>Timeline creation and rehearsal coordination</li>
+      <li>Day-of coordination (10 hours coverage)</li>
+    </ul>
+    <span>Starting at: $2,000</span>
+  </div>
+);
+
+const PeacefulContent = () => (
+  <div className="flex flex-col gap-2">
+    <span className="text-balance">
+      The all-inclusive experience for couples who want a stress-free planning
+      journey.
+    </span>
+    <ul className="list-disc list-inside font-semibold">
+      <li>Unlimited planning meetings</li>
+      <li>Full vendor sourcing and management</li>
+      <li>Budget planning and tracking</li>
+      <li>Event design and styling guidance</li>
+      <li>Timeline creation, rehearsal coordination</li>
+      <li>Full day-of coordination (up to 12 hours coverage)</li>
+    </ul>
+    <span>Starting at: $3,500</span>
+  </div>
+);
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="flex flex-col min-h-screen p-8 pb-20 gap-16 text-neutral-800">
+      <div className="flex flex-col gap-4 items-center text-balance text-center">
+        <span className="font-bold text-2xl">
+          “Creating your perfect day with ease, beauty, and peace of mind.”
+        </span>
+        <span className="text-lg">
+          At Peaceful Planning, we believe every couple deserves a stress-free
+          celebration. From intimate gatherings to grand events, we’re here to
+          handle the details so you can fully enjoy every moment.
+        </span>
+      </div>
+      <Hero />
+      <div className="flex flex-col md:flex-row gap-8 justify-center">
+        <Card
+          title="The Serene Package"
+          content={<SereneContent />}
+          badge={
+            <div className="badge badge-accent badge-sm">
+              Day-of Coordination
+            </div>
+          }
+          img="/ardent4930.jpg"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Card
+          title="The Tranquil Package"
+          content={<TranquilContent />}
+          badge={
+            <div className="badge badge-accent badge-sm">Partial Planning</div>
+          }
+          img="/ardent4862.jpg"
+        />
+        <Card
+          title="The Peaceful Package"
+          content={<PeacefulContent />}
+          badge={
+            <div className="badge badge-accent badge-sm">
+              Full-Service Planning
+            </div>
+          }
+          img="/ardent4860.jpg"
+        />
+      </div>
+      <div className="flex flex-col gap-4 items-center text-balance text-center">
+        <span className="font-bold text-2xl">
+          Your wedding should be joyful, not stressful. Let’s create a
+          celebration that’s uniquely yours—with peace of mind every step of the
+          way.
+        </span>
+        <button className="btn btn-neutral btn-lg rounded-lg">
+          Schedule a Free Consultation
+        </button>
+      </div>
     </div>
   );
 }
