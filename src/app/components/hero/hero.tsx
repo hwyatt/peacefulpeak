@@ -2,10 +2,13 @@ export const Hero = () => {
   return (
     <div className="hero bg-base-100">
       <div className="hero-content flex-col lg:flex-row gap-8">
-        <img src="/morgan.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
+        <img
+          src="/morgan.jpeg"
+          className="w-full max-w-sm rounded-lg shadow-2xl"
+        />
         <div className="flex flex-col items-center lg:items-start">
-          <h1 className="text-2xl font-bold">About Us</h1>
-          <p className="py-6">
+          <h1 className="text-2xl font-bold text-neutral-700">About Us</h1>
+          <p className="py-6 text-neutral-700">
             Hi, I’m Morgan Palser, the heart behind Peaceful Peak Planning. As
             an experienced event coordinator, my passion is helping couples turn
             their vision into reality. With an eye for detail and a calm,
@@ -29,12 +32,12 @@ export const Hero = () => {
             part of your journey and help bring your “happily ever after” to
             life.
           </p>
-          <button className="btn btn-neutral btn-lg btn-wide lg:hidden mt-8 rounded-lg">
+          <a
+            href="mailto:peacefulpeakplanning@gmail.com"
+            className="btn btn-accent btn-lg btn-wide mt-8 rounded-lg"
+          >
             Get Started
-          </button>
-          <button className="btn btn-neutral btn-lg hidden lg:block mt-8 rounded-lg">
-            Get Started
-          </button>
+          </a>
         </div>
       </div>
     </div>

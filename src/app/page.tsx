@@ -56,7 +56,7 @@ const PeacefulContent = () => (
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen p-8 pb-20 gap-16 text-neutral-800">
-      <div className="flex flex-col gap-4 items-center text-balance text-center">
+      <div className="flex flex-col gap-4 items-center text-balance text-center pt-8">
         <span className="font-bold text-2xl">
           “Creating your perfect day with ease, beauty, and peace of mind.”
         </span>
@@ -97,15 +97,18 @@ export default function Home() {
           img="/ardent4860.jpg"
         />
       </div>
-      <div className="flex flex-col gap-4 items-center text-balance text-center">
-        <span className="font-bold text-2xl">
+      <div className="flex flex-col gap-4 items-center text-balance text-center border-neutral border-y-2 py-4">
+        <span className="font-bold text-2xl text-neutral-700">
           Your wedding should be joyful, not stressful. Let’s create a
           celebration that’s uniquely yours—with peace of mind every step of the
           way.
         </span>
-        <button className="btn btn-neutral btn-lg rounded-lg">
+        <a
+          href="mailto:peacefulpeakplanning@gmail.com"
+          className="btn btn-accent btn-lg rounded-lg"
+        >
           Schedule a Free Consultation
-        </button>
+        </a>
       </div>
     </div>
   );
